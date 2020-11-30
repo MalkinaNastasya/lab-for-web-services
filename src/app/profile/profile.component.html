@@ -1,0 +1,15 @@
+<div class="container">
+    <h2 class="Title">
+        <span *ngIf="!hideAdmin"> Личный кабинет администратора</span>
+        <span *ngIf="!hideManager"> Личный кабинет косметолога</span>
+        <span *ngIf="!hideClient"> Личный кабинет клиента</span></h2>
+    <div *ngIf="!hideAdmin">
+        <app-admin></app-admin>
+    </div>
+    <div *ngIf="!hideManager">
+        <app-manager></app-manager>
+    </div>
+    <div *ngIf="!hideClient">
+        <app-cabinet></app-cabinet>
+    </div>
+</div>
